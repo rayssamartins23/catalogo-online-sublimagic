@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sublimagic - Catálogo de Produtos</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <!-- Espaço para sua Logo Redonda -->
+        <img src="logo.jpg" alt="Sublimagic Logo" class="logo-circle" id="logo-img" onerror="this.src='https://placehold.co/50x50?text=Logo'">
+        <h1>Sublimagic</h1>
+        <h6>personalizados</h6>
+        
+      </div>
+      <div class="nav-actions">
+        <button id="cart-btn" class="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count">0</span>
+        </button>
+        <a href="admin.html" class="admin-link" title="Painel Admin"><i class="fa-solid fa-user-lock"></i> Admin</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Principal -->
+  <section class="hero">
+    <h2>Produtos Personalizados com Amor e Magia ✨</h2>
+    <p>Escolha seus itens favoritos e envie seu pedido diretamente no nosso WhatsApp!</p>
+  </section>
+
+  <!-- Grid de Produtos -->
+  <main class="container">
+    <div id="products-grid" class="products-grid">
+      <p class="loading-msg">Carregando catálogo de produtos...</p>
+    </div>
+  </main>
+
+  <!-- Modal do Carrinho de Compras -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Seu Carrinho</h2>
+        <span class="close-btn" id="close-cart">&times;</span>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <p class="empty-cart-msg">Seu carrinho está vazio.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total:</span>
+          <strong id="cart-total-price">R$ 0,00</strong>
+        </div>
+        <button id="checkout-btn" class="btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> Finalizar no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN do Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
